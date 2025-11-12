@@ -1,7 +1,9 @@
+/* Define color variables */
+/* Define color variables */
 :root {
   --pink: #ff69b4;
   --light-pink: #ffc0cb;
-  --blue: #1a1a80;
+  --blue: #0000ff;
   --light-blue: #add8e6;
 }
 
@@ -14,10 +16,25 @@ body {
   text-align: center;
 }
 
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
 h1 {
   color: var(--pink);
-  text-align: center;
-  margin-bottom: 10px;
+  margin: 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   font-size: 2.5em;
 }
@@ -93,52 +110,7 @@ button:hover {
   background-color: var(--blue);
 }
 
-footer{
-    background-color: #ffffff;
-    color:#b5bafe;
-    text-align:center;
-    padding:20px 10px;
-    font-size:14px;
-    margin-top:40px;
-}
-
-footer .footer-content p{
-    margin:5px 0;
-}
-
-/* Responsive gallery: images keep aspect ratio and stack on small screens */
-.images-container {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  align-items: stretch;
-  padding: 0;
-  margin: 0;
-}
-
-.images-container a {
-  flex: 1 1 calc(33.333% - 10px);
-  box-sizing: border-box;
-  text-decoration: none;
-}
-
-.images-container img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;     /* preserves aspect ratio */
-  display: block;
-  border-radius: 6px;
-}
-
-/* Breakpoints for smaller screens */
-@media (max-width: 800px) {
-  .images-container a { flex: 1 1 calc(50% - 10px); }
-}
-
-@media (max-width: 480px) {
-  .images-container a { flex: 1 1 100%; }
-}
-
+/* IMAGES */
 .images-container {
   display: flex;
   flex-direction: column;
@@ -146,19 +118,35 @@ footer .footer-content p{
   gap: 15px;
 }
 
-.images-container img{
+.images-container img {
   max-width: 100%;
   height: auto;
-  border-radius:10px;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-@media (min-width:768px){
-  .images-container{
+
+@media (min-width: 768px) {
+  .images-container {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
   }
-  .images-container img{
-    width:30%;
+
+  .images-container img {
+    width: 30%;
   }
+}
+
+/* FOOTER */
+footer {
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+footer .footer-content p {
+  margin: 5px 0;
 }
